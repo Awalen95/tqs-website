@@ -1,0 +1,1507 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Time Quality Services LLC — Drywall, Paint & Epoxy · Pensacola to Destin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+
+<script>
+  // Tweakable defaults — persisted by the host
+  window.TQS_TWEAKS = /*EDITMODE-BEGIN*/{
+    "palette": "blackgold",
+    "display": "archivo",
+    "density": "comfortable",
+    "heroLayout": "split",
+    "showBeforeAfter": true,
+    "showStrip": true,
+    "accentTexture": true
+  }/*EDITMODE-END*/;
+</script>
+
+<style>
+  :root {
+    /* Default palette: black + gold (Time Quality Services brand) */
+    --bg: #faf7ef;
+    --bg-warm: #f1ebd9;
+    --paper: #ffffff;
+    --ink: #0a0a0a;
+    --ink-2: #1c1c1c;
+    --muted: #6f6a5d;
+    --line: #e3dcc6;
+    --accent: #c9a44a;       /* warm metallic gold */
+    --accent-2: #0a0a0a;     /* black */
+    --accent-soft: #f4ebcf;
+    --accent-gradient: linear-gradient(135deg, #d9bb6a 0%, #c9a44a 45%, #9a7825 100%);
+    --good: #4f6b3e;
+
+    --r-sm: 4px;
+    --r-md: 8px;
+    --r-lg: 14px;
+
+    --font-display: 'Archivo', system-ui, sans-serif;
+    --font-body: 'Manrope', system-ui, sans-serif;
+    --font-mono: 'DM Mono', ui-monospace, monospace;
+
+    --section-py: clamp(72px, 9vw, 132px);
+  }
+
+  /* palette variants */
+  body[data-palette="claynavy"] {
+    --bg: #f4efe6;
+    --bg-warm: #ebe3d3;
+    --ink: #16202b;
+    --ink-2: #2c3845;
+    --muted: #6b6256;
+    --line: #d8cfbe;
+    --accent: #b9501f;
+    --accent-2: #1a2a3a;
+    --accent-soft: #f4e6db;
+    --accent-gradient: linear-gradient(135deg, #d96a35 0%, #b9501f 100%);
+  }
+  body[data-palette="charcoalred"] {
+    --bg: #faf7f2;
+    --bg-warm: #f0ebe1;
+    --ink: #1a1a1a;
+    --ink-2: #2a2a2a;
+    --muted: #6a6a6a;
+    --line: #dcd5c8;
+    --accent: #b8362a;
+    --accent-2: #1a1a1a;
+    --accent-soft: #f4dcd8;
+    --accent-gradient: linear-gradient(135deg, #d44a3c 0%, #b8362a 100%);
+  }
+  body[data-palette="tealamber"] {
+    --bg: #f5f3ec;
+    --bg-warm: #ebe7da;
+    --ink: #0d2926;
+    --ink-2: #1d3a37;
+    --muted: #5e6b67;
+    --line: #cfd6cf;
+    --accent: #d68c3a;
+    --accent-2: #0d4f4a;
+    --accent-soft: #f6e4cb;
+    --accent-gradient: linear-gradient(135deg, #e6a358 0%, #d68c3a 100%);
+  }
+  body[data-palette="navygold"] {
+    --bg: #fbfaf6;
+    --bg-warm: #efebdd;
+    --ink: #0e2540;
+    --ink-2: #1a3a5e;
+    --muted: #5e6878;
+    --line: #d4d7c8;
+    --accent: #c79620;
+    --accent-2: #0a3d62;
+    --accent-soft: #f3e6c2;
+    --accent-gradient: linear-gradient(135deg, #e0b842 0%, #c79620 100%);
+  }
+
+  body[data-display="archivo"]   { --font-display: 'Archivo', sans-serif; }
+  body[data-display="serif"]     { --font-display: 'Archivo', sans-serif; } /* slot for future */
+
+  body[data-density="compact"] { --section-py: clamp(56px, 7vw, 96px); }
+  body[data-density="comfortable"] { --section-py: clamp(72px, 9vw, 132px); }
+  body[data-density="spacious"] { --section-py: clamp(96px, 12vw, 180px); }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .wrap { width: min(1240px, 92vw); margin: 0 auto; }
+
+  /* ---------- subtle grid texture ---------- */
+  body[data-texture="true"]::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(to right, rgba(22,32,43,0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(22,32,43,0.035) 1px, transparent 1px);
+    background-size: 56px 56px;
+    pointer-events: none; z-index: 0;
+  }
+  body > * { position: relative; z-index: 1; }
+
+  /* ---------- typography ---------- */
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 800; letter-spacing: -0.015em; margin: 0; line-height: 1.05; }
+  h1 { font-size: clamp(44px, 6.6vw, 104px); letter-spacing: -0.025em; }
+  h2 { font-size: clamp(34px, 4.4vw, 60px); letter-spacing: -0.022em; }
+  h3 { font-size: clamp(22px, 2.2vw, 30px); }
+  h4 { font-size: 18px; font-weight: 700; }
+  p { margin: 0; line-height: 1.55; }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::before {
+    content: ''; width: 28px; height: 1px; background: currentColor;
+  }
+
+  /* ---------- nav ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in oklab, var(--bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 14px;
+    text-decoration: none; color: var(--ink);
+  }
+  .logo-mark {
+    width: 52px; height: 52px;
+    flex-shrink: 0;
+    display: grid; place-items: center;
+    position: relative;
+  }
+  .logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo-text b { font-family: var(--font-display); font-weight: 800; font-size: 16px; letter-spacing: -0.01em; }
+  .logo-text span { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em; color: var(--muted); text-transform: uppercase; margin-top: 2px; }
+
+  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links a {
+    font-size: 14px; font-weight: 500;
+    text-decoration: none; color: var(--ink-2);
+    transition: color .15s;
+    white-space: nowrap;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-links a.nav-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 11px 18px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 14px; font-weight: 600;
+    transition: transform .15s, background .15s, color .15s;
+  }
+  .nav-links a.nav-cta:hover { background: var(--accent); color: var(--accent-2); transform: translateY(-1px); }
+  .nav-links a.nav-cta::before {
+    content: ''; width: 6px; height: 6px;
+    background: var(--accent); border-radius: 50%;
+    box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 30%, transparent);
+  }
+
+  @media (max-width: 720px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero { padding: clamp(48px, 7vw, 96px) 0 clamp(56px, 7vw, 96px); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: end;
+  }
+  body[data-hero="stack"] .hero-grid { grid-template-columns: 1fr; }
+  body[data-hero="stack"] .hero-photo { aspect-ratio: 21/9; }
+
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 14px 8px 8px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    background: var(--paper);
+    font-size: 13px; font-weight: 500;
+    margin-bottom: 28px;
+  }
+  .hero-tag i {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--accent-2); color: var(--bg);
+    display: grid; place-items: center;
+    font-style: normal;
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+  }
+  .hero h1 .accent { color: var(--accent); font-style: italic; font-weight: 700; font-family: 'Archivo', serif; }
+  .hero h1 .strike { position: relative; display: inline-block; }
+  .hero h1 .strike::after {
+    content: ''; position: absolute; left: -4%; right: -4%; top: 56%;
+    height: 6px; background: var(--accent); transform: rotate(-2deg);
+  }
+
+  .hero-sub {
+    margin-top: 26px;
+    font-size: clamp(16px, 1.3vw, 19px);
+    max-width: 50ch; color: var(--ink-2);
+  }
+
+  .hero-actions { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 24px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600; font-size: 15px;
+    border: 1px solid transparent;
+    transition: all .15s;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-2);
+  }
+  .btn-primary:hover { background: var(--accent-2); color: var(--accent); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .btn-secondary:hover { background: var(--ink); color: var(--bg); }
+  .btn .arrow { transition: transform .2s; }
+  .btn:hover .arrow { transform: translate(3px, -3px); }
+
+  .hero-meta {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    border-top: 1px solid var(--line);
+    padding-top: 28px;
+  }
+  .hero-meta .stat .num {
+    font-family: var(--font-display); font-weight: 800;
+    font-size: clamp(28px, 3vw, 40px); letter-spacing: -0.02em;
+    color: var(--accent-2);
+    line-height: 1;
+  }
+  .hero-meta .stat .lbl {
+    margin-top: 8px; color: var(--muted);
+    font-size: 12px; font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  /* hero photo treatment */
+  .hero-photo {
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    background: var(--bg-warm);
+    border: 1px solid var(--line);
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-photo .badge {
+    position: absolute; left: 18px; top: 18px;
+    background: var(--bg); color: var(--ink);
+    padding: 10px 14px;
+    border-radius: 100px;
+    font-size: 12px; font-weight: 600;
+    display: inline-flex; align-items: center; gap: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+  .hero-photo .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .hero-photo .card {
+    position: absolute; right: -1px; bottom: -1px;
+    background: var(--bg);
+    padding: 18px 22px;
+    border-top-left-radius: var(--r-lg);
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+    max-width: 78%;
+  }
+  .hero-photo .card .quote {
+    font-family: var(--font-display); font-weight: 600; font-size: 15px;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .hero-photo .card .who { font-size: 12px; color: var(--muted); margin-top: 8px; font-family: var(--font-mono); letter-spacing: 0.06em; }
+
+  @media (max-width: 820px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-photo { aspect-ratio: 4/3; }
+    .hero-meta { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  }
+
+  /* ---------- marquee strip ---------- */
+  .strip {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 18px 0;
+    overflow: hidden;
+    border-top: 1px solid var(--ink-2);
+    border-bottom: 1px solid var(--ink-2);
+  }
+  .strip-track {
+    display: flex; gap: 48px;
+    animation: marquee 38s linear infinite;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  .strip-item {
+    font-family: var(--font-display);
+    font-size: clamp(22px, 2.4vw, 32px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    display: inline-flex; align-items: center; gap: 48px;
+  }
+  .strip-item::after {
+    content: '✺'; color: var(--accent); font-size: 24px;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---------- services ---------- */
+  section { padding: var(--section-py) 0; }
+  .section-head {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 5vw, 72px);
+    margin-bottom: clamp(40px, 5vw, 64px);
+    align-items: end;
+  }
+  .section-head p { color: var(--muted); font-size: 17px; max-width: 50ch; }
+  @media (max-width: 720px) {
+    .section-head { grid-template-columns: 1fr; }
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+  }
+  .svc {
+    grid-column: span 6;
+    padding: 32px;
+    border-radius: var(--r-lg);
+    background: var(--paper);
+    border: 1px solid var(--line);
+    display: flex; flex-direction: column;
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .svc:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -20px rgba(22,32,43,0.18);
+  }
+  .svc.lg { grid-column: span 12; min-height: 260px; flex-direction: row; align-items: stretch; gap: 36px; }
+  .svc.lg .svc-body { flex: 1; }
+  .svc.lg .svc-vis {
+    flex: 0 0 38%;
+    background: var(--accent-soft);
+    margin: -32px -32px -32px 0;
+    border-left: 1px solid var(--line);
+    display: grid; place-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 820px) {
+    .svc { grid-column: span 12; }
+    .svc.lg { flex-direction: column; }
+    .svc.lg .svc-vis { margin: 0 -32px -32px -32px; flex-basis: 200px; border-left: 0; border-top: 1px solid var(--line); }
+  }
+  .svc-num {
+    font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.18em;
+    color: var(--accent);
+  }
+  .svc h3 { margin-top: 18px; }
+  .svc p { margin-top: 14px; color: var(--ink-2); font-size: 15px; }
+  .svc ul {
+    margin: 22px 0 0; padding: 0; list-style: none;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .svc ul li {
+    font-size: 14px;
+    padding-left: 22px;
+    position: relative;
+    color: var(--ink-2);
+  }
+  .svc ul li::before {
+    content: ''; position: absolute; left: 0; top: 8px;
+    width: 12px; height: 2px; background: var(--accent);
+  }
+  .svc-foot {
+    margin-top: auto; padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--muted); font-size: 13px;
+    font-family: var(--font-mono); letter-spacing: 0.06em;
+  }
+  .svc-arrow {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--ink); color: var(--bg);
+    display: grid; place-items: center;
+    transition: background .15s, transform .15s;
+  }
+  .svc:hover .svc-arrow { background: var(--accent); color: var(--accent-2); transform: rotate(-45deg); }
+
+  /* svc illustrations */
+  .vis-epoxy {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 30% 40%, rgba(255,255,255,0.6), transparent 50%),
+      radial-gradient(ellipse at 70% 60%, rgba(255,255,255,0.4), transparent 50%),
+      linear-gradient(135deg, var(--accent-2) 0%, var(--accent) 100%);
+  }
+  .vis-epoxy::after {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 25% 35%, rgba(255,255,255,0.3) 1px, transparent 2px),
+      radial-gradient(circle at 75% 65%, rgba(255,255,255,0.2) 1px, transparent 2px),
+      radial-gradient(circle at 50% 20%, rgba(0,0,0,0.15) 2px, transparent 3px),
+      radial-gradient(circle at 60% 80%, rgba(255,255,255,0.3) 1px, transparent 2px);
+    background-size: 40px 40px, 60px 60px, 80px 80px, 30px 30px;
+  }
+
+  /* ---------- before / after ---------- */
+  .ba {
+    margin-top: clamp(20px, 3vw, 32px);
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+  @media (max-width: 820px) {
+    .ba { grid-template-columns: 1fr; }
+  }
+  .ba-stage {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    border: 1px solid var(--line);
+    user-select: none;
+    background: var(--bg-warm);
+    cursor: ew-resize;
+    touch-action: none;
+  }
+  .ba-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+  .ba-stage .after-wrap { position: absolute; inset: 0; overflow: hidden; }
+  .ba-handle {
+    position: absolute; top: 0; bottom: 0; width: 3px; background: #fff;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 8px 24px rgba(0,0,0,0.25);
+    pointer-events: none;
+  }
+  .ba-handle::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    width: 44px; height: 44px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+  .ba-handle::before {
+    content: '◄ ►'; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11px; letter-spacing: 4px;
+    color: var(--ink); z-index: 1; font-weight: 700;
+  }
+  .ba-label {
+    position: absolute; top: 16px;
+    padding: 6px 12px;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    border-radius: 100px;
+    font-family: var(--font-mono);
+    font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase;
+    pointer-events: none;
+  }
+  .ba-label.l { left: 16px; }
+  .ba-label.r { right: 16px; background: rgba(185, 80, 31, 0.85); }
+
+  .ba-info {
+    padding: 32px;
+    background: var(--paper);
+    border-radius: var(--r-lg);
+    border: 1px solid var(--line);
+    display: flex; flex-direction: column;
+  }
+  .ba-info .where { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; }
+  .ba-info h3 { margin-top: 14px; }
+  .ba-info p { margin-top: 14px; color: var(--ink-2); font-size: 15px; }
+  .ba-info dl {
+    margin: auto 0 0; padding-top: 28px;
+    border-top: 1px dashed var(--line);
+    display: grid; grid-template-columns: auto 1fr; gap: 10px 24px;
+    font-size: 13px;
+  }
+  .ba-info dt { font-family: var(--font-mono); color: var(--muted); letter-spacing: 0.06em; }
+  .ba-info dd { margin: 0; color: var(--ink); font-weight: 600; }
+
+  /* ---------- gallery grid ---------- */
+  .gallery {
+    margin-top: clamp(24px, 3vw, 40px);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+  }
+  .tile {
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: var(--bg-warm);
+    position: relative;
+    aspect-ratio: 4/5;
+    grid-column: span 4;
+  }
+  @media (max-width: 720px) {
+    .tile { grid-column: span 12 !important; aspect-ratio: 4/3; }
+  }
+  .tile.project { display: block; }
+  .tile-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform .6s ease;
+  }
+  .tile.project:hover .tile-img { transform: scale(1.04); }
+  .tile-thumb {
+    position: absolute; top: 14px; right: 14px;
+    width: 88px; height: 88px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 2;
+  }
+  .tile-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .tile-thumb span {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    background: rgba(10,10,10,0.7);
+    color: #fff;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 3px 6px; text-align: center;
+  }
+  .tile-meta {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 18px 20px 20px;
+    background: linear-gradient(180deg, transparent 0%, rgba(10,10,10,0.55) 40%, rgba(10,10,10,0.85) 100%);
+    color: #fff;
+  }
+  .tile-tag {
+    display: inline-block;
+    background: var(--accent); color: var(--accent-2);
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 4px 8px; border-radius: 3px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .tile-meta h4 {
+    font-family: var(--font-display); font-weight: 700; font-size: 18px;
+    color: #fff; letter-spacing: -0.01em;
+  }
+
+  /* ---------- why us ---------- */
+  .why {
+    background: var(--ink);
+    color: var(--bg);
+    padding: var(--section-py) 0;
+    border-radius: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .why::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 80% 20%, rgba(185, 80, 31, 0.18), transparent 40%),
+      radial-gradient(circle at 10% 80%, rgba(185, 80, 31, 0.08), transparent 45%);
+    pointer-events: none;
+  }
+  .why .wrap { position: relative; }
+  .why h2 { color: var(--bg); }
+  .why .eyebrow { color: var(--accent); }
+  .why-grid {
+    margin-top: clamp(40px, 5vw, 64px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .why-grid > div {
+    padding: 32px 24px 32px 0;
+    border-right: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .why-grid > div:nth-child(4n) { border-right: 0; }
+  .why-grid > div:nth-child(n+1) { padding-left: 24px; }
+  .why-grid > div:nth-child(4n+1) { padding-left: 0; }
+  @media (max-width: 820px) {
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid > div:nth-child(2n) { border-right: 0; }
+    .why-grid > div { padding: 24px !important; border-right: 1px solid rgba(255,255,255,0.12); }
+    .why-grid > div:nth-child(2n) { border-right: 0; }
+  }
+  .why-num {
+    font-family: var(--font-display);
+    font-size: 56px; font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .why h4 { margin: 20px 0 10px; color: var(--bg); font-size: 19px; }
+  .why p { color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.55; }
+
+  /* ---------- area ---------- */
+  .area {
+    background: var(--bg-warm);
+  }
+  .area-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  @media (max-width: 820px) { .area-grid { grid-template-columns: 1fr; } }
+  .map {
+    aspect-ratio: 5/4;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    position: relative;
+    overflow: hidden;
+  }
+  .map svg { width: 100%; height: 100%; display: block; }
+  .city-list {
+    list-style: none; padding: 0; margin: 24px 0 0;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 20px;
+  }
+  .city-list li {
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 15px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .city-list li .miles {
+    font-family: var(--font-mono); font-size: 12px; color: var(--muted);
+    white-space: nowrap;
+  }
+  .city-list li.hub { color: var(--accent); font-weight: 700; }
+  .city-list li.hub::before {
+    content: '◆'; margin-right: 8px; color: var(--accent);
+  }
+
+  /* ---------- testimonials ---------- */
+  .reviews-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 820px) { .reviews-row { grid-template-columns: 1fr; } }
+  .review {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 28px;
+    display: flex; flex-direction: column;
+    min-height: 240px;
+    position: relative;
+  }
+  .review .stars { color: var(--accent); font-size: 14px; letter-spacing: 4px; }
+  .review .placeholder-tag {
+    position: absolute; top: 14px; right: 14px;
+    background: var(--accent-soft); color: var(--accent);
+    font-size: 10px; padding: 4px 8px; border-radius: 100px;
+    font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .review p {
+    margin-top: 16px;
+    font-family: var(--font-display);
+    font-size: 19px; font-weight: 500;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+  .review footer {
+    margin-top: auto; padding-top: 24px;
+    display: flex; align-items: center; gap: 14px;
+    border-top: 1px solid var(--line);
+  }
+  .review .avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--accent-2); color: var(--bg);
+    display: grid; place-items: center;
+    font-family: var(--font-display); font-weight: 700; font-size: 15px;
+  }
+  .review .name { font-weight: 600; font-size: 14px; }
+  .review .place { font-size: 12px; color: var(--muted); font-family: var(--font-mono); letter-spacing: 0.06em; }
+
+  /* ---------- CTA / contact ---------- */
+  .cta {
+    background: var(--accent-2);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(ellipse at 100% 0%, color-mix(in oklab, var(--accent) 60%, transparent), transparent 50%),
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0 14px, transparent 14px 28px);
+    pointer-events: none;
+  }
+  .cta .wrap { position: relative; }
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+  }
+  @media (max-width: 820px) { .cta-grid { grid-template-columns: 1fr; } }
+  .cta h2 { color: #fff; }
+  .cta .eyebrow { color: rgba(255,255,255,0.85); }
+  .cta-lead { font-size: clamp(17px, 1.4vw, 20px); margin-top: 24px; max-width: 50ch; color: rgba(255,255,255,0.9); }
+
+  .cta-call {
+    margin-top: 36px;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .cta-call .phone {
+    font-family: var(--font-display);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 800;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    display: inline-flex; align-items: center; gap: 18px;
+    line-height: 1;
+  }
+  .cta-call .phone svg { flex-shrink: 0; }
+  .cta-call .hours {
+    font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.85);
+  }
+  .form {
+    background: #fff;
+    color: var(--ink);
+    padding: 32px;
+    border-radius: var(--r-lg);
+    box-shadow: 0 24px 60px -20px rgba(0,0,0,0.3);
+  }
+  .form h3 { font-size: 22px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+  .form-row.full { grid-template-columns: 1fr; }
+  .field label {
+    display: block; font-size: 12px; font-family: var(--font-mono);
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    border-radius: var(--r-md);
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--ink);
+    transition: border-color .15s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus {
+    outline: none; border-color: var(--accent);
+  }
+  .field textarea { resize: vertical; min-height: 90px; }
+  .form button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 16px;
+    background: var(--accent);
+    color: var(--accent-2);
+    border: 0; border-radius: 100px;
+    font-family: var(--font-body); font-size: 15px; font-weight: 700;
+    cursor: pointer;
+    transition: background .15s;
+  }
+  .form button:hover { background: var(--accent-2); color: var(--accent); }
+  .form .note { margin-top: 12px; font-size: 12px; color: var(--muted); text-align: center; }
+
+  /* ---------- footer ---------- */
+  footer.foot {
+    background: var(--ink);
+    color: rgba(255,255,255,0.8);
+    padding: 56px 0 24px;
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  .foot-grid h5 {
+    font-family: var(--font-mono); font-size: 12px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 18px;
+  }
+  .foot-grid ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .foot-grid a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 14px; }
+  .foot-grid a:hover { color: var(--accent); }
+  .foot-brand { font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #fff; letter-spacing: -0.01em; }
+  .foot-tag { color: rgba(255,255,255,0.6); margin-top: 8px; font-size: 14px; max-width: 36ch; }
+  .foot-bottom {
+    padding-top: 24px;
+    display: flex; justify-content: space-between;
+    font-size: 12px; color: rgba(255,255,255,0.5);
+    font-family: var(--font-mono); letter-spacing: 0.06em;
+  }
+  @media (max-width: 720px) { .foot-bottom { flex-direction: column; gap: 8px; } }
+
+  /* ---------- placeholder notice ---------- */
+  .notice {
+    background: #fff4e0;
+    border: 1px solid #f0d399;
+    border-radius: var(--r-md);
+    padding: 16px 20px;
+    font-size: 13px;
+    color: #6b4a18;
+    display: flex; align-items: flex-start; gap: 12px;
+    margin: 24px 0;
+  }
+  .notice .badge {
+    background: #d68c3a; color: #fff;
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
+    padding: 3px 8px; border-radius: 4px; text-transform: uppercase;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body data-palette="blackgold" data-display="archivo" data-density="comfortable" data-hero="split" data-texture="true">
+
+  <!-- NAV -->
+  <header class="nav" data-screen-label="00 Nav">
+    <div class="wrap nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark"><img src="assets/tqs-logo-cut.png" alt="Time Quality Services LLC"></div>
+        <div class="logo-text">
+          <b>Time Quality Services LLC</b>
+          <span>Mobile · Pensacola · Destin · PCB</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#work">Our work</a>
+        <a href="#about">Why us</a>
+        <a href="#area">Service area</a>
+        <a href="#contact" class="nav-cta">Call (850) 454-5792</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" data-screen-label="01 Hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="hero-tag"><i>★</i> Locally owned &amp; operated · Pensacola, FL</span>
+          <h1>
+            Drywall, paint &amp; epoxy<br>
+            done <span class="accent">right</span> the<br>
+            first time.
+          </h1>
+          <p class="hero-sub">
+            Time Quality Services handles the finish work most contractors won't slow down for — clean drywall repairs, sharp paint lines, and epoxy floors that hold up to Gulf-coast living. One crew, one phone number, from <strong>Mobile, AL</strong> to <strong>Panama City Beach, FL</strong>.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
+              Get a free estimate
+              <span class="arrow">↗</span>
+            </a>
+            <a href="#work" class="btn btn-secondary">See the work</a>
+          </div>
+          <div class="hero-meta">
+            <div class="stat">
+              <div class="num">7<span style="color:var(--accent)">+</span></div>
+              <div class="lbl">Years in the panhandle</div>
+            </div>
+            <div class="stat">
+              <div class="num">100<span style="color:var(--accent)">+</span></div>
+              <div class="lbl">Projects completed</div>
+            </div>
+            <div class="stat">
+              <div class="num">100<span style="color:var(--accent)">%</span></div>
+              <div class="lbl">Licensed &amp; insured</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/ceiling-after.jpg" alt="Smooth painted ceiling and walls around a brick fireplace, completed by Time Quality Services">
+          <div class="badge"><span class="dot"></span> Recently finished · Pensacola</div>
+          <div class="card">
+            <div class="quote">"Showed up when they said, cleaned up before they left. The ceiling looks brand new."</div>
+            <div class="who">— Homeowner · East Hill</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIP -->
+  <div class="strip" id="strip" data-screen-label="02 Strip">
+    <div class="strip-track">
+      <span class="strip-item">Drywall repair</span>
+      <span class="strip-item">Interior painting</span>
+      <span class="strip-item">Exterior painting</span>
+      <span class="strip-item">Epoxy floors</span>
+      <span class="strip-item">Texture matching</span>
+      <span class="strip-item">Popcorn removal</span>
+      <span class="strip-item">Handyman work</span>
+      <span class="strip-item">Drywall repair</span>
+      <span class="strip-item">Interior painting</span>
+      <span class="strip-item">Exterior painting</span>
+      <span class="strip-item">Epoxy floors</span>
+      <span class="strip-item">Texture matching</span>
+      <span class="strip-item">Popcorn removal</span>
+      <span class="strip-item">Handyman work</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" data-screen-label="03 Services">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">What we do</span>
+          <h2 style="margin-top:18px">Three things we&rsquo;re really good at — plus the punch list.</h2>
+        </div>
+        <p>Most calls start with one thing: a stained ceiling, a wall scuff a flipper missed, a garage that needs to handle real life. We come in, scope the whole job, and quote it honestly.</p>
+      </div>
+
+      <div class="services">
+        <div class="svc">
+          <span class="svc-num">01 / Service</span>
+          <h3>Drywall Repair</h3>
+          <p>Patches that disappear. We match texture — knockdown, orange peel, smooth — so the repair blends into the wall instead of jumping out under the light.</p>
+          <ul>
+            <li>Hole &amp; crack patching</li>
+            <li>Water damage &amp; ceiling repair</li>
+            <li>Texture matching</li>
+            <li>Popcorn ceiling removal</li>
+          </ul>
+          <div class="svc-foot">
+            <span>From $180 / patch</span>
+            <span class="svc-arrow" aria-hidden="true">↗</span>
+          </div>
+        </div>
+
+        <div class="svc">
+          <span class="svc-num">02 / Service</span>
+          <h3>Painting</h3>
+          <p>Interior and exterior. Proper prep — caulk, sand, prime — then sharp lines and full coverage. We use Sherwin-Williams and Benjamin Moore. No drips on your baseboards.</p>
+          <ul>
+            <li>Whole-home interior</li>
+            <li>Single rooms &amp; accent walls</li>
+            <li>Exterior siding &amp; trim</li>
+            <li>Cabinet refinishing</li>
+          </ul>
+          <div class="svc-foot">
+            <span>From $1.85 / sq ft</span>
+            <span class="svc-arrow" aria-hidden="true">↗</span>
+          </div>
+        </div>
+
+        <div class="svc lg">
+          <div class="svc-body" style="display:flex; flex-direction:column;">
+            <span class="svc-num">03 / Service · Premium</span>
+            <h3>Epoxy Floors &amp; Coatings</h3>
+            <p>Garage floors that don't peel in the humidity. Patios that don't crack at the first cold snap. Decorative metallics, solid colors, flake systems — sealed and ready to handle salt, oil, and the Gulf-coast sun.</p>
+            <ul style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px 16px;">
+              <li>Garage floors</li>
+              <li>Patios &amp; pool decks</li>
+              <li>Metallic finishes</li>
+              <li>Flake / chip systems</li>
+              <li>Commercial floors</li>
+              <li>Countertop overlays</li>
+            </ul>
+            <div class="svc-foot">
+              <span>2-car garage from $1,950</span>
+              <span class="svc-arrow" aria-hidden="true">↗</span>
+            </div>
+          </div>
+          <div class="svc-vis">
+            <div class="vis-epoxy" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="svc" style="grid-column: span 12; min-height: auto;">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap: wrap;">
+            <div>
+              <span class="svc-num">+ Also</span>
+              <h3 style="margin-top:10px">Handyman &amp; punch list</h3>
+              <p style="margin-top:10px; max-width: 60ch;">Door adjustments, trim work, caulking, pressure washing, fence repair, light fixture swaps — if it's on your "I keep meaning to fix that" list, ask. Two-job minimum on small items.</p>
+            </div>
+            <a href="#contact" class="btn btn-secondary">Ask about your list →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER + WORK -->
+  <section id="work" style="background: var(--bg-warm);" data-screen-label="04 Work">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Recent work</span>
+          <h2 style="margin-top:18px">Drag the slider. That's the same room.</h2>
+        </div>
+        <p>Drywall repair, retexture, prime &amp; paint on a Pensacola family room. Two-day turnaround. The cleanest part is what you don't see.</p>
+      </div>
+
+      <div class="ba" id="beforeAfter">
+        <div class="ba-stage" id="baStage">
+          <img src="assets/ceiling-before.jpg" alt="Ceiling before repair — visible drywall patches and joints" id="baBefore">
+          <div class="after-wrap" id="baAfterWrap">
+            <img src="assets/ceiling-after.jpg" alt="Ceiling after — smooth and painted" id="baAfter">
+          </div>
+          <span class="ba-label l">Before</span>
+          <span class="ba-label r">After</span>
+          <div class="ba-handle" id="baHandle" style="left: 50%;"></div>
+        </div>
+        <div class="ba-info">
+          <span class="where">Project · Pensacola, FL</span>
+          <h3>Family-room ceiling repair &amp; refinish</h3>
+          <p>Recessed lighting retrofit left the ceiling in pieces. We patched the cuts, retextured to match the existing surface, primed, and rolled two coats of flat ceiling white. The fireplace surround got cut-in clean.</p>
+          <dl>
+            <dt>Scope</dt><dd>Drywall · Texture · Paint</dd>
+            <dt>Crew</dt><dd>2</dd>
+            <dt>Time on site</dt><dd>2 days</dd>
+            <dt>Area</dt><dd>~340 sq ft ceiling</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="tile project">
+          <img class="tile-img" src="assets/floor-after.jpg" alt="Refinished hardwood floor — glossy, freshly sealed">
+          <div class="tile-thumb">
+            <img src="assets/floor-before.jpg" alt="Hardwood floor before — sanded raw">
+            <span>Before</span>
+          </div>
+          <div class="tile-meta">
+            <span class="tile-tag">Hardwood refinish</span>
+            <h4>Sand, stain &amp; seal</h4>
+          </div>
+        </div>
+
+        <div class="tile project">
+          <img class="tile-img" src="assets/wall-paint-after.jpg" alt="Living room with fresh terracotta paint and finished ceiling">
+          <div class="tile-thumb">
+            <img src="assets/wall-paint-before.jpg" alt="Walls being primed for new color">
+            <span>Before</span>
+          </div>
+          <div class="tile-meta">
+            <span class="tile-tag">Interior paint</span>
+            <h4>Yellow → terracotta</h4>
+          </div>
+        </div>
+
+        <div class="tile project">
+          <img class="tile-img" src="assets/wall-yellow-finished.jpg" alt="Finished room with new drywall and refinished hardwood floor">
+          <div class="tile-thumb">
+            <img src="assets/drywall-install.jpg" alt="Drywall being installed over framing">
+            <span>Before</span>
+          </div>
+          <div class="tile-meta">
+            <span class="tile-tag">Drywall + paint</span>
+            <h4>Full room buildout</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="about" class="why" data-screen-label="05 Why">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Why hire us</span>
+          <h2 style="margin-top:18px; max-width: 16ch;">A small crew. The work shows up on the wall.</h2>
+        </div>
+        <p style="color: rgba(255,255,255,0.7)">We're not a big franchise and we don't sub everything out to whoever's free. You'll have one point of contact from the quote to the walk-through.</p>
+      </div>
+      <div class="why-grid">
+        <div>
+          <div class="why-num">01</div>
+          <h4>Quotes within 48 hrs</h4>
+          <p>Send us a few photos or have us out for a free walk-through. You get a written, itemized quote — no "we'll see when we open it up."</p>
+        </div>
+        <div>
+          <div class="why-num">02</div>
+          <h4>One crew, start to finish</h4>
+          <p>The same hands that started your job are the same hands that finish it. No revolving door of day labor.</p>
+        </div>
+        <div>
+          <div class="why-num">03</div>
+          <h4>We clean up</h4>
+          <p>Dropcloths on the floor, plastic on the cabinets, dust contained with zip walls when needed. We leave the room cleaner than we found it.</p>
+        </div>
+        <div>
+          <div class="why-num">04</div>
+          <h4>Licensed &amp; insured</h4>
+          <p>Florida-licensed, fully insured, and bondable for commercial work. We'll send our COI before we show up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section data-screen-label="06 Reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Word of mouth</span>
+          <h2 style="margin-top:18px">What clients tell their neighbors.</h2>
+        </div>
+        <p>Most of our work comes from referrals — these are pulled from text messages and Google reviews. Send us yours after the job's done and we'll feature it here.</p>
+      </div>
+      <div class="reviews-row">
+        <div class="review">
+          <span class="placeholder-tag">Sample</span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"Showed up when they said, cleaned up before they left. Ceiling looks brand new and the price was exactly what was quoted."</p>
+          <footer>
+            <div class="avatar">M</div>
+            <div>
+              <div class="name">Megan R.</div>
+              <div class="place">East Hill, Pensacola</div>
+            </div>
+          </footer>
+        </div>
+        <div class="review">
+          <span class="placeholder-tag">Sample</span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"Did our garage epoxy in two days. Two summers in and it still looks like the day they finished. Salt, sand, oil — nothing's stuck."</p>
+          <footer>
+            <div class="avatar">D</div>
+            <div>
+              <div class="name">Derek W.</div>
+              <div class="place">Navarre, FL</div>
+            </div>
+          </footer>
+        </div>
+        <div class="review">
+          <span class="placeholder-tag">Sample</span>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"Three other quotes came in higher and slower. They were honest about what we actually needed. Will be hiring again for the exterior."</p>
+          <footer>
+            <div class="avatar">J</div>
+            <div>
+              <div class="name">Jamie &amp; Tom</div>
+              <div class="place">Destin, FL</div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <div class="notice" style="margin-top: 32px;">
+        <span class="badge">Note</span>
+        <div><b>These are placeholder testimonials.</b> Send me a few real customer quotes (with first name + city) and I'll swap them in.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section id="area" class="area" data-screen-label="07 Area">
+    <div class="wrap">
+      <div class="area-grid">
+        <div>
+          <span class="eyebrow">Service area</span>
+          <h2 style="margin-top:18px">Mobile, AL to Panama City Beach.</h2>
+          <p style="margin-top:24px; color: var(--ink-2); font-size:17px;">We cover the entire Gulf Coast — from Mobile, AL east through the Florida panhandle all the way to PCB. No travel fee inside our core service area.</p>
+          <ul class="city-list">
+            <li>Mobile, AL <span class="miles">58 mi W</span></li>
+            <li>Spanish Fort, AL <span class="miles">48 mi W</span></li>
+            <li>Foley, AL <span class="miles">36 mi W</span></li>
+            <li class="hub">Pensacola <span class="miles">HQ</span></li>
+            <li>Gulf Breeze <span class="miles">8 mi</span></li>
+            <li>Pace / Milton <span class="miles">12 mi</span></li>
+            <li>Navarre <span class="miles">28 mi</span></li>
+            <li>Fort Walton <span class="miles">37 mi</span></li>
+            <li>Destin <span class="miles">52 mi</span></li>
+            <li>Santa Rosa Bch <span class="miles">66 mi</span></li>
+            <li>Panama City Bch <span class="miles">95 mi</span></li>
+            <li>Other <span class="miles">Ask</span></li>
+          </ul>
+        </div>
+
+        <div class="map">
+          <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(10,10,10,0.05)" stroke-width="1"/>
+              </pattern>
+              <linearGradient id="gulf" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#d6e2e8"/>
+                <stop offset="1" stop-color="#a8c3d1"/>
+              </linearGradient>
+            </defs>
+            <rect width="600" height="480" fill="var(--bg-warm)"/>
+            <rect width="600" height="480" fill="url(#grid)"/>
+
+            <!-- Gulf -->
+            <path d="M0,300 Q90,335 200,310 T420,315 T600,330 L600,480 L0,480 Z" fill="url(#gulf)" opacity="0.7"/>
+            <!-- Mobile Bay carve-in -->
+            <path d="M62,300 Q70,360 90,395 Q105,360 102,300 Z" fill="url(#gulf)" opacity="0.85"/>
+
+            <!-- Coastline -->
+            <path d="M0,300 Q90,335 200,310 T420,315 T600,330" fill="none" stroke="rgba(10,10,10,0.45)" stroke-width="1.5"/>
+
+            <!-- Inland boundary -->
+            <path d="M0,90 L600,90" stroke="rgba(10,10,10,0.12)" stroke-dasharray="4 4" stroke-width="1"/>
+
+            <!-- State boundary (AL/FL) -->
+            <path d="M130,90 Q132,180 138,280 L138,310" stroke="rgba(10,10,10,0.18)" stroke-dasharray="5 4" stroke-width="1"/>
+
+            <text x="60" y="82" font-family="DM Mono, monospace" font-size="11" fill="rgba(10,10,10,0.45)" letter-spacing="2">ALABAMA</text>
+            <text x="200" y="82" font-family="DM Mono, monospace" font-size="11" fill="rgba(10,10,10,0.45)" letter-spacing="2">FLORIDA</text>
+            <text x="540" y="468" font-family="DM Mono, monospace" font-size="11" fill="rgba(10,10,10,0.45)" letter-spacing="2" text-anchor="end">GULF OF MEXICO</text>
+
+            <!-- Service area band -->
+            <path d="M30,260 Q150,290 320,275 T570,300 L570,335 Q400,315 200,330 T20,300 Z"
+                  fill="var(--accent)" opacity="0.18"/>
+
+            <!-- Route line -->
+            <path d="M50,275 Q180,300 340,288 T550,310" stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/>
+
+            <!-- City pins -->
+            <g font-family="Manrope, sans-serif" font-size="11" font-weight="600" fill="var(--ink)">
+              <!-- Mobile -->
+              <g transform="translate(50,278)">
+                <circle r="6" fill="var(--accent-2)"/>
+                <text x="0" y="-12" text-anchor="middle" font-weight="700">Mobile</text>
+              </g>
+              <!-- Foley -->
+              <g transform="translate(108,288)">
+                <circle r="4" fill="var(--ink)"/>
+                <text x="0" y="19" text-anchor="middle" font-size="10">Foley</text>
+              </g>
+              <!-- Pensacola HQ -->
+              <g transform="translate(180,278)">
+                <circle r="9" fill="var(--accent)"/>
+                <circle r="3" fill="#fff"/>
+                <circle r="14" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.4">
+                  <animate attributeName="r" from="9" to="22" dur="2s" repeatCount="indefinite"/>
+                  <animate attributeName="opacity" from="0.5" to="0" dur="2s" repeatCount="indefinite"/>
+                </circle>
+                <text x="0" y="-14" text-anchor="middle" font-weight="700">Pensacola</text>
+                <text x="0" y="-2" text-anchor="middle" font-size="9" font-family="DM Mono, monospace" fill="var(--muted)" letter-spacing="1">HQ</text>
+              </g>
+              <!-- Navarre -->
+              <g transform="translate(255,293)">
+                <circle r="4" fill="var(--ink)"/>
+                <text x="0" y="18" text-anchor="middle" font-size="10">Navarre</text>
+              </g>
+              <!-- Fort Walton -->
+              <g transform="translate(320,284)">
+                <circle r="4" fill="var(--ink)"/>
+                <text x="0" y="-10" text-anchor="middle" font-size="10">Ft. Walton</text>
+              </g>
+              <!-- Destin -->
+              <g transform="translate(380,290)">
+                <circle r="6" fill="var(--accent-2)"/>
+                <text x="0" y="21" text-anchor="middle" font-weight="700">Destin</text>
+              </g>
+              <!-- Santa Rosa Beach -->
+              <g transform="translate(450,300)">
+                <circle r="4" fill="var(--ink)"/>
+                <text x="0" y="-10" text-anchor="middle" font-size="10">Santa Rosa</text>
+              </g>
+              <!-- PCB -->
+              <g transform="translate(540,310)">
+                <circle r="7" fill="var(--accent)"/>
+                <text x="0" y="22" text-anchor="middle" font-weight="700">Panama City Bch</text>
+              </g>
+            </g>
+
+            <!-- Scale -->
+            <g transform="translate(20,440)" font-family="DM Mono, monospace" font-size="10" fill="var(--muted)">
+              <line x1="0" y1="0" x2="100" y2="0" stroke="currentColor" stroke-width="1"/>
+              <line x1="0" y1="-4" x2="0" y2="4" stroke="currentColor" stroke-width="1"/>
+              <line x1="50" y1="-3" x2="50" y2="3" stroke="currentColor" stroke-width="1"/>
+              <line x1="100" y1="-4" x2="100" y2="4" stroke="currentColor" stroke-width="1"/>
+              <text x="0" y="16" letter-spacing="1">0 — 50 — 100 MI</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" class="cta" data-screen-label="08 Contact">
+    <div class="wrap">
+      <div class="cta-grid">
+        <div>
+          <span class="eyebrow">Get in touch</span>
+          <h2 style="margin-top:18px">Have a job? Tell us about it.</h2>
+          <p class="cta-lead">
+            Easiest way to get a real quote: snap two or three photos of what you're working with and text them over. We'll respond within a business day with next steps and ballpark pricing.
+          </p>
+          <div class="cta-call">
+            <a href="tel:18504545792" class="phone">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              (850) 454-5792
+            </a>
+            <div class="hours">Mon – Sat · 7a – 6p · Text after hours</div>
+          </div>
+        </div>
+
+        <form class="form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent ✓'; this.querySelector('button').style.background='var(--good)';">
+          <h3>Request a free quote</h3>
+          <div class="form-row">
+            <div class="field">
+              <label>First name</label>
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input type="tel" placeholder="(850) 000-0000" required>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="field">
+              <label>City</label>
+              <select>
+                <option>Mobile, AL</option>
+                <option>Spanish Fort / Daphne, AL</option>
+                <option>Foley, AL</option>
+                <option>Pensacola</option>
+                <option>Gulf Breeze</option>
+                <option>Pace / Milton</option>
+                <option>Navarre</option>
+                <option>Fort Walton Beach</option>
+                <option>Destin</option>
+                <option>Miramar / Santa Rosa Beach</option>
+                <option>Panama City Beach</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row full">
+            <div class="field">
+              <label>What do you need done?</label>
+              <textarea placeholder="Drywall patch in master bedroom · about 2 ft of damage from a leak..."></textarea>
+            </div>
+          </div>
+          <button type="submit">Send my request →</button>
+          <div class="note">Or text photos directly to (850) 454-5792</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="foot" data-screen-label="09 Footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-brand">Time Quality Services</div>
+          <div class="foot-tag">Drywall, paint &amp; epoxy work for homes &amp; small businesses from Mobile, AL through the Florida panhandle. Licensed &amp; insured.</div>
+        </div>
+        <div>
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Drywall repair</a></li>
+            <li><a href="#services">Painting</a></li>
+            <li><a href="#services">Epoxy floors</a></li>
+            <li><a href="#services">Handyman</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Our work</a></li>
+            <li><a href="#area">Service area</a></li>
+            <li><a href="#contact">Get a quote</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Reach us</h5>
+          <ul>
+            <li><a href="tel:18504545792">(850) 454-5792</a></li>
+            <li><a href="mailto:info@timequalityservices.net">info@timequalityservices.net</a></li>
+            <li><a href="https://www.facebook.com/people/Time-Quality-Services/61551561913004/" target="_blank" rel="noopener">Facebook ↗</a></li>
+            <li>Mobile, AL → PCB, FL</li>
+            <li>Mon – Sat · 7a – 6p</li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div>© 2026 Time Quality Services LLC · Licensed &amp; Insured</div>
+        <div>Mobile · Pensacola · Destin · Panama City Beach</div>
+      </div>
+    </div>
+  </footer>
+
+<!-- TWEAKS PANEL -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks-app.jsx"></script>
+
+<script>
+  // Before / after slider
+  (function() {
+    const stage = document.getElementById('baStage');
+    const handle = document.getElementById('baHandle');
+    const afterWrap = document.getElementById('baAfterWrap');
+    if (!stage || !handle || !afterWrap) return;
+
+    let pct = 50;
+    function setPct(p) {
+      pct = Math.max(2, Math.min(98, p));
+      handle.style.left = pct + '%';
+      afterWrap.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
+    }
+    setPct(50);
+
+    let dragging = false;
+    function fromEvent(e) {
+      const rect = stage.getBoundingClientRect();
+      const x = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+      return (x / rect.width) * 100;
+    }
+    stage.addEventListener('mousedown', e => { dragging = true; setPct(fromEvent(e)); });
+    stage.addEventListener('touchstart', e => { dragging = true; setPct(fromEvent(e)); }, { passive: true });
+    window.addEventListener('mousemove', e => { if (dragging) setPct(fromEvent(e)); });
+    window.addEventListener('touchmove', e => { if (dragging) setPct(fromEvent(e)); }, { passive: true });
+    window.addEventListener('mouseup', () => dragging = false);
+    window.addEventListener('touchend', () => dragging = false);
+
+    // Auto-demo on first view
+    let demoed = false;
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting && !demoed) {
+          demoed = true;
+          let t = 0;
+          const start = Date.now();
+          const i = setInterval(() => {
+            const dt = (Date.now() - start) / 1000;
+            if (dt > 2.4) { clearInterval(i); setPct(50); return; }
+            const v = 50 + Math.sin(dt * 2.5) * 25;
+            setPct(v);
+          }, 16);
+        }
+      });
+    }, { threshold: 0.4 });
+    io.observe(stage);
+  })();
+</script>
+
+</body>
+</html>
