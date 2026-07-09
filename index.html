@@ -9,18 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
 
-<script>
-  window.TQS_TWEAKS = /*EDITMODE-BEGIN*/{
-    "palette": "blackgold",
-    "display": "archivo",
-    "density": "comfortable",
-    "heroLayout": "split",
-    "showBeforeAfter": true,
-    "showStrip": true,
-    "accentTexture": true
-  }/*EDITMODE-END*/;
-</script>
-
 <style>
   :root {
     --bg: #faf7ef;
@@ -551,7 +539,7 @@
     background: var(--bg-warm);
     position: relative;
     aspect-ratio: 4/5;
-    grid-column: span 4;
+    grid-column: span 3;
   }
   @media (max-width: 720px) {
     .tile { grid-column: span 12 !important; aspect-ratio: 4/3; }
@@ -701,12 +689,6 @@
     position: relative;
   }
   .review .stars { color: var(--accent); font-size: 14px; letter-spacing: 4px; }
-  .review .placeholder-tag {
-    position: absolute; top: 14px; right: 14px;
-    background: var(--accent-soft); color: var(--accent);
-    font-size: 10px; padding: 4px 8px; border-radius: 100px;
-    font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;
-  }
   .review p {
     margin-top: 16px;
     font-family: var(--font-display);
@@ -781,40 +763,6 @@
     box-shadow: 0 24px 60px -20px rgba(0,0,0,0.3);
   }
   .form h3 { font-size: 22px; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
-  .form-row.full { grid-template-columns: 1fr; }
-  .field label {
-    display: block; font-size: 12px; font-family: var(--font-mono);
-    letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
-    margin-bottom: 6px;
-  }
-  .field input, .field select, .field textarea {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid var(--line);
-    background: var(--bg);
-    border-radius: var(--r-md);
-    font-family: var(--font-body);
-    font-size: 15px;
-    color: var(--ink);
-    transition: border-color .15s;
-  }
-  .field input:focus, .field select:focus, .field textarea:focus {
-    outline: none; border-color: var(--accent);
-  }
-  .field textarea { resize: vertical; min-height: 90px; }
-  .form button {
-    margin-top: 22px;
-    width: 100%;
-    padding: 16px;
-    background: var(--accent);
-    color: var(--accent-2);
-    border: 0; border-radius: 100px;
-    font-family: var(--font-body); font-size: 15px; font-weight: 700;
-    cursor: pointer;
-    transition: background .15s;
-  }
-  .form button:hover { background: var(--accent-2); color: var(--accent); }
   .form .note { margin-top: 12px; font-size: 12px; color: var(--muted); text-align: center; }
 
   /* footer */
@@ -850,23 +798,6 @@
   }
   @media (max-width: 720px) { .foot-bottom { flex-direction: column; gap: 8px; } }
 
-  /* placeholder notice */
-  .notice {
-    background: #fff4e0;
-    border: 1px solid #f0d399;
-    border-radius: var(--r-md);
-    padding: 16px 20px;
-    font-size: 13px;
-    color: #6b4a18;
-    display: flex; align-items: flex-start; gap: 12px;
-    margin: 24px 0;
-  }
-  .notice .badge {
-    background: #d68c3a; color: #fff;
-    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em;
-    padding: 3px 8px; border-radius: 4px; text-transform: uppercase;
-    flex-shrink: 0;
-  }
 </style>
 </head>
 <body data-palette="blackgold" data-display="archivo" data-density="comfortable" data-hero="split" data-texture="true">
@@ -1076,6 +1007,18 @@
 
       <div class="gallery">
         <div class="tile project">
+          <img class="tile-img" src="assets/epoxy-floor-after.jpg" alt="Living room concrete floor with glossy epoxy topcoat, finished">
+          <div class="tile-thumb">
+            <img src="assets/epoxy-floor-before.jpg" alt="Living room bare concrete floor before epoxy coating">
+            <span>Before</span>
+          </div>
+          <div class="tile-meta">
+            <span class="tile-tag">Epoxy floor coating</span>
+            <h4>Concrete → clear-coated epoxy</h4>
+          </div>
+        </div>
+
+        <div class="tile project">
           <img class="tile-img" src="assets/floor-after.jpg" alt="Refinished hardwood floor — glossy, freshly sealed">
           <div class="tile-thumb">
             <img src="assets/floor-before.jpg" alt="Hardwood floor before — sanded raw">
@@ -1157,49 +1100,64 @@
           <span class="eyebrow">Word of mouth</span>
           <h2 style="margin-top:18px">What clients tell their neighbors.</h2>
         </div>
-        <p>Most of our work comes from referrals — these are pulled from text messages and Google reviews. Send us yours after the job's done and we'll feature it here.</p>
+        <p>Real reviews from customers across the panhandle — pulled from Google and Facebook.</p>
       </div>
       <div class="reviews-row">
         <div class="review">
-          <span class="placeholder-tag">Sample</span>
           <div class="stars">★ ★ ★ ★ ★</div>
-          <p>"Showed up when they said, cleaned up before they left. Ceiling looks brand new and the price was exactly what was quoted."</p>
+          <p>"This was a great place — they helped turn around one of our offices that needed some work. I definitely recommend these guys, good people and great prices."</p>
           <footer>
             <div class="avatar">M</div>
             <div>
-              <div class="name">Megan R.</div>
-              <div class="place">East Hill, Pensacola</div>
+              <div class="name">Michael Eibeck</div>
+              <div class="place">Pensacola, FL</div>
             </div>
           </footer>
         </div>
         <div class="review">
-          <span class="placeholder-tag">Sample</span>
           <div class="stars">★ ★ ★ ★ ★</div>
-          <p>"Did our garage epoxy in two days. Two summers in and it still looks like the day they finished. Salt, sand, oil — nothing's stuck."</p>
+          <p>"Excellent service from start to finish. Professional, punctual, and very thorough. Everything was completed on time and with great attention to detail. This company is extremely reliable."</p>
           <footer>
-            <div class="avatar">D</div>
+            <div class="avatar">M</div>
             <div>
-              <div class="name">Derek W.</div>
-              <div class="place">Navarre, FL</div>
+              <div class="name">Monica Thompkins</div>
+              <div class="place">Ft. Walton Beach, FL</div>
             </div>
           </footer>
         </div>
         <div class="review">
-          <span class="placeholder-tag">Sample</span>
           <div class="stars">★ ★ ★ ★ ★</div>
-          <p>"Three other quotes came in higher and slower. They were honest about what we actually needed. Will be hiring again for the exterior."</p>
+          <p>"Needed drywall repair in the garage, and within less than 24 hours we were given a quote and the job was finished! Excellent and efficient work. Will use them again."</p>
           <footer>
-            <div class="avatar">J</div>
+            <div class="avatar">A</div>
             <div>
-              <div class="name">Jamie &amp; Tom</div>
+              <div class="name">Anita Claussen</div>
               <div class="place">Destin, FL</div>
             </div>
           </footer>
         </div>
-      </div>
-      <div class="notice" style="margin-top: 32px;">
-        <span class="badge">Note</span>
-        <div><b>These are placeholder testimonials.</b> Send real customer quotes (with first name + city) to swap them in.</div>
+        <div class="review">
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"James was very knowledgeable and informative. He was willing to explain the details of his process and logic. I would definitely use him again for future projects!"</p>
+          <footer>
+            <div class="avatar">T</div>
+            <div>
+              <div class="name">Toni Cross</div>
+              <div class="place">Pensacola, FL</div>
+            </div>
+          </footer>
+        </div>
+        <div class="review">
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p>"Very professional. Gave a quote and stuck to it. If something was wrong, gave me different options to consider. Highly recommend their services."</p>
+          <footer>
+            <div class="avatar">H</div>
+            <div>
+              <div class="name">Howard Webster</div>
+              <div class="place">Navarre, FL</div>
+            </div>
+          </footer>
+        </div>
       </div>
     </div>
   </section>
@@ -1343,46 +1301,11 @@
           </div>
         </div>
 
-        <form class="form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent ✓'; this.querySelector('button').style.background='var(--good)';">
+        <div class="form">
           <h3>Request a free quote</h3>
-          <div class="form-row">
-            <div class="field">
-              <label>First name</label>
-              <input type="text" placeholder="Your name" required>
-            </div>
-            <div class="field">
-              <label>Phone</label>
-              <input type="tel" placeholder="(850) 000-0000" required>
-            </div>
-          </div>
-          <div class="form-row full">
-            <div class="field">
-              <label>City</label>
-              <select>
-                <option>Mobile, AL</option>
-                <option>Spanish Fort / Daphne, AL</option>
-                <option>Foley, AL</option>
-                <option>Pensacola</option>
-                <option>Gulf Breeze</option>
-                <option>Pace / Milton</option>
-                <option>Navarre</option>
-                <option>Fort Walton Beach</option>
-                <option>Destin</option>
-                <option>Miramar / Santa Rosa Beach</option>
-                <option>Panama City Beach</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row full">
-            <div class="field">
-              <label>What do you need done?</label>
-              <textarea placeholder="Drywall patch in master bedroom · about 2 ft of damage from a leak..."></textarea>
-            </div>
-          </div>
-          <button type="submit">Send my request →</button>
+          <iframe src="https://fluidforms.co/embed/form?id=684c9ef5bb604299824a08f1" width="100%" height="600" frameborder="0" style="margin-top: 18px; border: 0; display: block;" title="Request a free quote"></iframe>
           <div class="note">Or text photos directly to (850) 454-5792</div>
-        </form>
+        </div>
       </div>
     </div>
   </section>
@@ -1430,13 +1353,6 @@
       </div>
     </div>
   </footer>
-
-<!-- TWEAKS PANEL (design-mode only) -->
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script type="text/babel" src="tweaks-panel.jsx"></script>
-<script type="text/babel" src="tweaks-app.jsx"></script>
 
 <script>
   // Before / after slider
